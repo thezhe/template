@@ -29,6 +29,7 @@ target_link_libraries(test-template template)
 add_test(NAME test-template COMMAND test-template)
 # Package
 install(TARGETS test-template)
+set(CPACK_STRIP_FILES TRUE)
 set(CPACK_GENERATOR "ZIP")
 set(CPACK_PACKAGE_FILE_NAME "${PROJECT_NAME}_${CMAKE_SYSTEM_NAME}")
 include(CPack)
