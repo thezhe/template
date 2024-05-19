@@ -1,11 +1,11 @@
 #ifdef NDEBUG
     #undef NDEBUG // assert in Release
 #endif
-#include "template/template.h"
+#include "template.h"
 #include <assert.h>
+#include <stdlib.h>
 int main()
 {
-    using namespace thezhe::templatepp; // NOLINT
-    assert(Templatepp::returnTrue());
+    assert(template_true());
     return EXIT_SUCCESS;
 }
