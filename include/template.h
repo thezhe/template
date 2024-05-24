@@ -1,6 +1,6 @@
 #pragma once
-#include <stdbool.h>
+#include <stdint.h>
 /*!
- * @return true always
+ * @return 1 always
  */
-bool template_true();
+int_fast32_t template_true();

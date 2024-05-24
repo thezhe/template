@@ -1,5 +1,6 @@
 #include "template.h"
-bool template_true()
+#include <stdint.h>
+int_fast32_t template_true()
 {
-    return true;
+    return 1;
 }
