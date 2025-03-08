@@ -1,3 +1,3 @@
 # template
 
-C template project
+C project template
