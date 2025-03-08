@@ -1,0 +1,34 @@
+If:
+        PathExclude: build/.*
+CompileFlags:
+        Add: [-Wall, -Wextra]
+Diagnostics:
+        ClangTidy:
+                Remove:
+                        - llvmlibc-restrict-system-libc-headers
+                Add: '*'
+                CheckOptions:
+                        readability-function-cognitive-complexity.Threshold: 15
+                        readability-identifier-naming.ConstantCase: lower_case
+                        readability-identifier-naming.ConstantParameterCase: camelBack
+                        readability-identifier-naming.ConstantPointerParameterCase: camelBack
+                        readability-identifier-naming.ConstexprFunctionCase: lower_case
+                        readability-identifier-naming.ConstexprVariableCase: lower_case
+                        readability-identifier-naming.EnumCase: CamelCase
+                        readability-identifier-naming.EnumConstantCase: UPPER_CASE
+                        readability-identifier-naming.FunctionCase: lower_case
+                        readability-identifier-naming.LocalConstantCase: lower_case
+                        readability-identifier-naming.LocalConstantPointerCase: lower_case
+                        readability-identifier-naming.LocalPointerCase: lower_case
+                        readability-identifier-naming.LocalVariableCase: lower_case
+                        readability-identifier-naming.MacroDefinitionCase: UPPER_CASE
+                        readability-identifier-naming.ParameterCase: camelBack
+                        readability-identifier-naming.ParameterPackCase: camelBack
+                        readability-identifier-naming.PointerParameterCase: camelBack
+                        readability-identifier-naming.StaticConstantCase: lower_case
+                        readability-identifier-naming.StaticVariableCase: lower_case
+                        readability-identifier-naming.StructCase: CamelCase
+                        readability-identifier-naming.TypeDefCase: lower_case
+                        readability-identifier-naming.VariableCase: lower_case
+        MissingIncludes: Strict
+        UnusedIncludes: Strict
